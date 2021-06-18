@@ -123,13 +123,7 @@ Main Sidebar Container -->
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="nav-icon fas fa-list-alt"></i>
-                  <p>Laporan Tiket</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('admin/produk') ?>" class="nav-link">
+                <a href="<?php echo base_url('admin/') ?>" class="nav-link">
                   <i class="nav-icon fas fa-list-alt"></i>
                   <p>Laporan Data Pengunjung</p>
                 </a>

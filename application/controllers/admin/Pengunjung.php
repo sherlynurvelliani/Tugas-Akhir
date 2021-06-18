@@ -27,14 +27,27 @@ class Pengunjung extends CI_Controller {
 		//validasi input
 		$valid = $this->form_validation;
 		
-		$valid->set_rules('id_booking','nama','required',
+		$valid->set_rules('id_booking','id_booking','required',
 			array('required' => '%s Harus Diisi' ));
-		$valid->set_rules('tanggal','kategori','required',
+
+		$valid->set_rules('nama','nama','required',
 			array('required' => '%s Harus Diisi' ));
-		$valid->set_rules('jumlah','harga','required',
+
+		$valid->set_rules('tanggal','tanggal','required',
 			array('required' => '%s Harus Diisi' ));
-		$valid->set_rules('nama_wisata','required',
+
+		$valid->set_rules('kategori','kategori','required',
 			array('required' => '%s Harus Diisi' ));
+
+		$valid->set_rules('jumlah','jumlah','required',
+			array('required' => '%s Harus Diisi' ));
+
+		$valid->set_rules('harga','harga','required',
+			array('required' => '%s Harus Diisi' ));
+
+		$valid->set_rules('nama_wisata','nama_wisata','required',
+			array('required' => '%s Harus Diisi' ));
+
 
 		if ($valid->run()===FALSE) {
 			//end validasi

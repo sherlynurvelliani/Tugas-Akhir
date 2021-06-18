@@ -34,21 +34,7 @@
       </div>
 
       <!-- ./col -->
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box" style="background-color: #6a492b">
-          <div class="inner">
-            <h3>44</h3>
-            <p>Berita</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-person-add"></i>
-          </div>
-          <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-
-      <!-- ./col -->
+      
       <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box" style="background-color: #c70039">
@@ -63,21 +49,7 @@
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box" style="background-color: #008891" >
-          <div class="inner">
-            <h3>65</h3>
-            <p>Laporan Data Tiket</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-pie-graph"></i>
-          </div>
-          <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-
-      <!-- ./col -->
+      
       <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box" style="background-color: #9f5f80">

@@ -19,7 +19,7 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Id Booking</label>
 							<div class="col-md-5">
-								<input type="text" name="id_booking" class="form-control" placeholder="id booking" value="<?php echo set_value('id_booking')?>" readonly>
+								<input type="text" name="id_booking" class="form-control" placeholder="id booking" value="<?php echo set_value('id_booking')?>">
 							</div>
 						</div>
 
@@ -43,7 +43,7 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Kategori Tiket</label>
 							<div class="col-md-5">
-								<input type="text" name="kategori" class="form-control" placeholder="kategori tiket" value="<?php echo set_value('kategori tiket')?>" required>
+								<input type="text" name="kategori" class="form-control" placeholder="kategori tiket" value="<?php echo set_value('kategori')?>" required>
 							</div>
 						</div>
 

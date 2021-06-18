@@ -14,8 +14,8 @@
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">Profil</a></li>
           <li><a href="#features">Informasi</a></li>
-          <li><a href="#pricing">Tiket</a></li>
-          <li><a href="#team">Pesan Tiket</a></li>
+          <li><a href="<?php echo base_url('user/Tiket_user') ?>">Tiket</a></li>
+          <li><a href="<?php echo base_url('user/Pengunjung_user') ?>">Pesan Tiket</a></li>
           <li><a href="#gallery">Galeri</a></li>
           <li><a href="#contact">Hubungi kami</a></li>
         </ul>
@@ -72,17 +72,12 @@
     <section id="features">
       <div class="container">
 
-        <div class="row">
-
           <div class="col-lg-8 offset-lg-4">
             <div class="section-header wow fadeIn" data-wow-duration="1s">
-              <h3 class="section-title">Product Featuress</h3>
+              <h3 class="section-title">Tips Mengunjungi Taman Narmada</h3>
+              <p>Jika ingin berkunjung, ada beberapa tips ini perlu kamu perhatikan, diantaranya:</p>
               <span class="section-divider"></span>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-5 features-img">
-            <img src="<?=base_url('assets/')?>assets/img/product-features.png" alt="" class="wow fadeInLeft">
           </div>
 
           <div class="col-lg-8 col-md-7 ">
@@ -90,24 +85,29 @@
             <div class="row">
 
               <div class="col-lg-6 col-md-6 box wow fadeInRight">
-                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident clarida perendo.</p>
+                <div class="icon"><i class="far fa-address-card"></i></div>
+                <h4 class="title"><a href="">Berpakaian Yang Sopan</a></h4>
+                <p class="description">Jika berkunjung ke area pura, pengunjung akan diberikan kain untuk menutupi pinggang ke bawah sampai di bawah lutut. Untuk memastikan bahwa para pengunjung sudah menggunakan pakaian yang sopan, pihak petugas pintu masuk juga menyediakan selendang dan kain untuk para pengunjung yang datang.</p>
               </div>
               <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
                 <div class="icon"><i class="ion-ios-flask-outline"></i></div>
-                <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata noble dynala mark.</p>
+                <h4 class="title"><a href="">Wanita Haid Jangan Memasuki Area Pura</a></h4>
+                <p class="description">Sebagai tempat yang dikategorikan suci oleh masyarakat Lombok, salah satu peraturan yang ada di Taman Narmada Lombok adalah wanita yang tengah datang bulan tidak boleh memasuki area Pura yang ada di Taman ini.</p>
               </div>
               <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
                 <div class="icon"><i class="ion-social-buffer-outline"></i></div>
-                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur teleca starter sinode park ledo.</p>
+                <h4 class="title"><a href="">Menggunakan Alas Kaki Nyaman</a></h4>
+                <p class="description">Pengunjung sebaiknya menggunakan alas kaki yang nyaman dan aman. Hal ini dikarenakan ketika berwisata di tempat ini sebaiknya berjalan kaki sambil menikmati asri dan keindahan taman.</p>
               </div>
               <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
                 <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum dinoun trade capsule.</p>
+                <h4 class="title"><a href="">Menjaga Anak-Anak</a></h4>
+                <p class="description">Bagi pengunjung yang datang berkunjung bersama anak-anak diharapkan selalu menjaga anak itu. Karena di Taman Narmada memiliki banyak kolam yang cukup dalam. Sehingga dikhawatirkan anak-anak bisa saja jatuh ke dalamnya.</p>
+              </div>
+               <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
+                <div class="icon"><i class="ion-social-buffer-outline"></i></div>
+                <h4 class="title"><a href="">Siapkan Kamera</a></h4>
+                <p class="description">Tentu liburan akan kurang lengkap jika tidak mengambil gambar sebagai kenang-kenangan. Jangan lupa untuk membawa kamera dari rumah. Di sana pengunjung bisa berfoto dengan background yang indah.</p>
               </div>
             </div>
 
@@ -124,6 +124,13 @@
 
       <div class="features-row section-bg">
         <div class="container">
+          <div class="section-header">
+          <h2 class="section-title">Aktivitas Menarik di Taman Narmada</h2>
+          <span class="section-divider"></span>
+          <p class="section-description">
+           Beragam aktivitas yang dapat dilakukan ketika sedang berkunjung ke Taman Narmada ini. Beberapa diantaranya seperti berikut:
+          </p>
+        </div>
           <div class="row">
             <div class="col-12">
               <img class="advanced-feature-img-right wow fadeInRight" src="<?=base_url('assets/')?>assets/img/awg.jpg" alt="">
@@ -217,11 +224,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Call To Action</h3>
+            <h3 class="cta-title">Pesan Tiketmu Sekarang Juga</h3>
             <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="<?php echo base_url("user/Pengunjung_user") ?>">Pesan Tiket</a>
           </div>
         </div>
 
