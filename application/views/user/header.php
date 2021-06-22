@@ -7,7 +7,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?php echo base_url('') ?>assets/assets/img/favicon.png" rel="icon">
+  <link href="<?php echo base_url('') ?>asets/img/favicon.png" rel="icon">
   <link href="<?php echo base_url('') ?>assets/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->

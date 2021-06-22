@@ -23,11 +23,11 @@
                   <th>No</th>
                   <th>Id Booking</th>
                   <th>Nama Pengunjung</th>
+                  <th>No Hp</th>
                   <th>Tanggal Pemesanan</th>
                   <th>Kategori Tiket</th>
                   <th>Jumlah Tiket</th>
                   <th>Total Harga</th>
-                  <th>Nama Wisata</th>
                   <th>AKSI</th>
                 </tr>
               </thead>
@@ -37,11 +37,11 @@
                     <td><?php echo $no ?></td>
                     <td><?php echo $pengunjung->id_booking ?></td>
                     <td><?php echo $pengunjung->nama ?></td>
+                    <td><?php echo $pengunjung->no_hp ?></td>
                     <td><?php echo $pengunjung->tanggal ?></td>
                     <td><?php echo $pengunjung->kategori ?></td>
                     <td><?php echo $pengunjung->jumlah ?></td>
                     <td><?php echo $pengunjung->harga ?></td>
-                    <td><?php echo $pengunjung->nama_wisata ?></td>
                     
                     <td>
                       <a href="<?php echo base_url('admin/pengunjung/edit/'.$pengunjung->id_booking) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>

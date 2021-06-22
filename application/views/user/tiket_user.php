@@ -46,7 +46,7 @@
           <li><a href="#about">Profil</a></li>
           <li><a href="#features">Informasi</a></li>
           <li><a href="<?php echo base_url('user/Tiket_user') ?>">Tiket</a></li>
-          <li><a href="#team">Pesan Tiket</a></li>
+          <li><a href="<?php echo base_url('user/Pengunjung_user') ?>">Pesan Tiket</a></li>
           <li><a href="#gallery">Galeri</a></li>
           <li><a href="#contact">Hubungi kami</a></li>
         </ul>
@@ -59,7 +59,7 @@
   <section id="intro">
 
     <div class="intro-text">
-      <h2>Data Tiket Narmada Park</h2>
+      <h2>Informasi Paket & Tiket Narmada Park</h2>
       
     </div>
   </section><!-- End Intro Section -->
@@ -69,10 +69,56 @@
       <div class="container">
 
         <div class="section-header">
-          <h3 class="section-title">Informasi Paket & Tiket Narmada Park</h3>
+          <h3 class="section-title">Paket</h3>
           <p class="section-description">Paket yang tersedia pada Narmada Park</p>
           <span class="section-divider"></span>
         </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box featured wow fadeInUp">
+              <h4>Paket 1</h4>
+              <h3>IDR 2222</h3>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> 2 Tiket Dewasa</li>
+                <li><i class="ion-android-checkmark-circle"></i> 2 Tiket Anak-Anak</li>
+                <li><i class="ion-android-checkmark-circle"></i> 2 Ttiket Bebek-Bebekan</li>
+                <li><i class="ion-android-checkmark-circle"></i> 4 Tiket Flying Fox</li>
+              </ul>
+              <a href="<?php echo base_url('user/Pengunjung_user') ?>" class="get-started-btn">Pesan</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box featured wow fadeInUp">
+              <h4>Paket 2</h4>
+              <h3>IDR 2222</h3>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> 4 Tiket Dewasa</li>
+                <li><i class="ion-android-checkmark-circle"></i> 2 Tiket Bebek-Bebekan</li>
+                <li><i class="ion-android-checkmark-circle"></i> 4 Tiket Flying Fox</li>
+              </ul>
+              <a href="<?php echo base_url('user/Pengunjung_user') ?>" class="get-started-btn">Pesan</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box featured wow fadeInUp">
+              <h4>Paket 3 (WNA)</h4>
+              <h3>IDR 2222</h3>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> 4 Tiket </li>
+                <li><i class="ion-android-checkmark-circle"></i> 2 Tiket Bebek-Bebekan</li>
+                <li><i class="ion-android-checkmark-circle"></i> 4 Tiket Flying Fox</li>
+              </ul>
+              <a href="<?php echo base_url('user/Pengunjung_user') ?>" class="get-started-btn">Pesan</a>
+            </div>
+          </div>
+        
+
+        </div>
+
       </section>
   <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq">

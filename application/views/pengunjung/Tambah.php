@@ -31,6 +31,14 @@
 							</div>
 						</div>
 
+						<!-- no hp -->
+						<div class="form-group row">
+							<label class="col-md-2 col-form-label">No Hp</label>
+							<div class="col-md-5">
+								<input type="text" name="no_hp" class="form-control" placeholder="No Hp" value="<?php echo set_value('no_hp')?>" >
+							</div>
+						</div>
+
 						<!-- tanggal pemesanan  -->
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Tanggal Pemesanan</label>
@@ -61,14 +69,6 @@
 							<label class="col-md-2 col-form-label">Total Harga</label>
 							<div class="col-md-5">
 								<input type="text" name="harga" class="form-control" placeholder="total harga" value="<?php echo set_value('harga')?>" required>
-							</div>
-						</div>
-
-						<!-- nama wisata  -->
-						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Nama Wisata</label>
-							<div class="col-md-5">
-								<input type="text" name="nama_wisata" class="form-control" placeholder="nama wisata" value="<?php echo set_value('nama_wisata')?>" required>
 							</div>
 						</div>
 

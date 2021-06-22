@@ -33,6 +33,9 @@ class Pengunjung extends CI_Controller {
 		$valid->set_rules('nama','nama','required',
 			array('required' => '%s Harus Diisi' ));
 
+		$valid->set_rules('no_hp','no_hp','required',
+			array('required' => '%s Harus Diisi' ));
+
 		$valid->set_rules('tanggal','tanggal','required',
 			array('required' => '%s Harus Diisi' ));
 
@@ -45,14 +48,13 @@ class Pengunjung extends CI_Controller {
 		$valid->set_rules('harga','harga','required',
 			array('required' => '%s Harus Diisi' ));
 
-		$valid->set_rules('nama_wisata','nama_wisata','required',
-			array('required' => '%s Harus Diisi' ));
-
 
 		if ($valid->run()===FALSE) {
 			//end validasi
-			$data = array('title' => 'Tambah Data Pengunjung', 
-				'isi'	=> 'pengunjung/tambah'
+			$data = array(
+				'title' => 'Tambah Data Pengunjung', 
+				'isi'	=> 'pengunjung/tambah',
+				'tiket' => $this->db->get('tabel_tiket')->result();
 			);
 			$this->load->view('admin/wrapper', $data, FALSE);
 		}else{
@@ -60,11 +62,11 @@ class Pengunjung extends CI_Controller {
 			$data = array(
 				'id_booking' => $i->post('id_booking'),
 				'nama' => $i->post('nama'),
+				'no_hp' => $i->post('no_hp'),
 				'tanggal' => $i->post('tanggal'),
 				'kategori' => $i->post('kategori'),
 				'jumlah' => $i->post('jumlah'),
 				'harga' => $i->post('harga'),
-				'nama_wisata' => $i->post('nama_wisata'),
 			);
 			$this->Pengunjung_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data Telah di Tambahkan');
@@ -85,6 +87,9 @@ class Pengunjung extends CI_Controller {
 		$valid->set_rules('nama','nama','required',
 			array('required' => '%s Harus Diisi' ));
 
+		$valid->set_rules('no_hp','no_hp','required',
+			array('required' => '%s Harus Diisi' ));
+
 		$valid->set_rules('tanggal','tanggal','required',
 			array('required' => '%s Harus Diisi' ));
 
@@ -97,10 +102,6 @@ class Pengunjung extends CI_Controller {
 		$valid->set_rules('harga','harga','required',
 			array('required' => '%s Harus Diisi' ));
 
-		$valid->set_rules('nama_wisata','nama_wisata','required',
-			array('required' => '%s Harus Diisi' ));
-
-
 		if ($valid->run()===FALSE) {
 			$data = array('title' => 'Edit Data Pengunjung', 
 				'pengunjung' => $pengunjung,
@@ -111,11 +112,11 @@ class Pengunjung extends CI_Controller {
 			$i = $this->input;
 			$data = array('id_booking' => $id_booking,
 				'nama' => $i->post('nama'),
+				'no_hp' => $i->post('no_hp'),
 				'tanggal' => $i->post('tanggal'),
 				'kategori' => $i->post('kategori'),
 				'jumlah' => $i->post('jumlah'),
 				'harga' => $i->post('harga'),
-				'nama_wisata' => $i->post('nama_wisata')
 			);
 			$this->Pengunjung_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data Telah di Edit');

@@ -8,13 +8,15 @@ class Pengunjung_user extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Pengunjung_model');
+		$this->load->model('Tiket_model', 'tm');
 	}
 	//data pengunjung
 	public function index()
 	{
-		$pengunjung = $this->Pengunjung_model->listing();
-		$data = array('title' => 'Data pengunjung', 
-			'pengunjung' => $pengunjung,
+		$tiket = $this->tm->listing();
+		$data = array(
+			'title' => 'Data pengunjung', 
+			'tiket' => $tiket,
 			'isi'	=> 'pengunjung/list'
 		);
 		$this->load->view('user/pengunjung_user', $data, FALSE);
@@ -29,11 +31,11 @@ class Pengunjung_user extends CI_Controller {
 		
 		//validasi input
 		$valid = $this->form_validation;
-		
-		$valid->set_rules('id_booking','id_booking','required',
-			array('required' => '%s Harus Diisi' ));
 
 		$valid->set_rules('nama','nama','required',
+			array('required' => '%s Harus Diisi' ));
+
+		$valid->set_rules('no_hp','no_hp','required',
 			array('required' => '%s Harus Diisi' ));
 
 		$valid->set_rules('tanggal','tanggal','required',
@@ -48,25 +50,23 @@ class Pengunjung_user extends CI_Controller {
 		$valid->set_rules('harga','harga','required',
 			array('required' => '%s Harus Diisi' ));
 
-		$valid->set_rules('nama_wisata','nama_wisata','required',
-			array('required' => '%s Harus Diisi' ));
 
 		if ($valid->run()===FALSE) {
 			//end validasi
-			$data = array('title' => 'Tambah Data Pengunjung', 
-				'isi'	=> 'pengunjung/tambah'
-			);
-			$this->load->view('user/Beranda', $data, FALSE);
+			// $data = array('title' => 'Tambah Data Pengunjung', 
+			// 	'isi'	=> 'pengunjung/tambah'
+			// );
+			// $this->load->view('user/Beranda', $data, FALSE);
+			$this->index();
 		}else{
 			$i = $this->input;
 			$data = array(
-				'id_booking' => $i->post('id_booking'),
 				'nama' => $i->post('nama'),
+				'no_hp' => $i->post('no_hp'),
 				'tanggal' => $i->post('tanggal'),
 				'kategori' => $i->post('kategori'),
 				'jumlah' => $i->post('jumlah'),
 				'harga' => $i->post('harga'),
-				'nama_wisata' => $i->post('nama_wisata'),
 			);
 			$this->Pengunjung_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data Telah di Tambahkan');
@@ -78,5 +78,5 @@ class Pengunjung_user extends CI_Controller {
 	
 }
 
-/* End of file Pengunjung.php */
+/* End of file Pengunjung_user.php */
 /* Location: ./application/controllers/admin/Pengunjung.php */

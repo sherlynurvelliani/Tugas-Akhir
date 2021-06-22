@@ -274,7 +274,7 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="section-bg">
+    <!-- <section id="pricing" class="section-bg">
       <div class="container">
 
         <div class="section-header">
@@ -332,10 +332,11 @@
 
         </div>
       </div>
-    </section><!-- End Pricing Section -->
+    </section>
+     --><!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq">
+    <!-- <section id="faq">
       <div class="container">
 
         <div class="section-header">
@@ -402,10 +403,11 @@
         </ul>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section>
+     --><!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="section-bg">
+   <!--  <section id="team" class="section-bg">
       <div class="container">
         <div class="section-header">
           <h3 class="section-title">Formulir Pendaftaran</h3>
@@ -415,7 +417,8 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section> -->
+    <!-- End Team Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery">

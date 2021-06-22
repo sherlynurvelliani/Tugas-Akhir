@@ -46,7 +46,7 @@
           <li><a href="#about">Profil</a></li>
           <li><a href="#features">Informasi</a></li>
           <li><a href="<?php echo base_url('user/Tiket_user') ?>">Tiket</a></li>
-          <li><a href="#team">Pesan Tiket</a></li>
+          <li><a href="<?php echo base_url('user/Pengunjung_user') ?>">Pesan Tiket</a></li>
           <li><a href="#gallery">Galeri</a></li>
           <li><a href="#contact">Hubungi kami</a></li>
         </ul>
@@ -72,7 +72,7 @@
           <p class="section-description">Silahkan mendaftar pada form yang disiapkan</p>
           <span class="section-divider"></span>
         </div>
-      </section>
+     
 
 <section class="content">
 	<div class="container-fluid">
@@ -90,20 +90,20 @@
 //form open
 						echo form_open(base_url('admin/pengunjung/tambah'),'class="form-horizontal"');
 						?>
-						
-						<!-- id booking -->
-						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Id Booking</label>
-							<div class="col-md-5">
-								<input type="text" name="id_booking" class="form-control" placeholder="id booking" value="<?php echo set_value('id_booking')?>">
-							</div>
-						</div>
 
 						<!-- nama pengunjung -->
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Nama Pengunjung</label>
 							<div class="col-md-5">
 								<input type="text" name="nama" class="form-control" placeholder="Nama Pengunjung" value="<?php echo set_value('nama')?>" >
+							</div>
+						</div>
+
+						<!-- no hp -->
+						<div class="form-group row">
+							<label class="col-md-2 col-form-label">No Hp</label>
+							<div class="col-md-5">
+								<input type="text" name="no_hp" class="form-control" placeholder="No hp" value="<?php echo set_value('no_hp')?>" >
 							</div>
 						</div>
 
@@ -117,9 +117,14 @@
 
 						<!-- kategori tiket -->
 						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Kategori Tiket</label>
+							<label for="inputkt" class="col-md-2 col-form-label">Kategori Tiket</label>
 							<div class="col-md-5">
-								<input type="text" name="kategori" class="form-control" placeholder="kategori tiket" value="<?php echo set_value('kategori tiket')?>" required>
+							<select class="form-control" name="kategori" id="inputkt" placeholder="pilih jumlah">
+								<?php 
+							foreach ($tiket as $tiket) : ?>
+						<option value="<?php echo $tiket->kategori;?>"> <?php echo $tiket->kategori; ?></option>
+							<?php endforeach; ?>
+								</select>
 							</div>
 						</div>
 
@@ -140,22 +145,14 @@
 							</div>
 						</div>
 
-						<!-- nama wisata  -->
-						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Nama Wisata</label>
-							<div class="col-md-5">
-								<input type="text" name="nama_wisata" class="form-control" placeholder="nama wisata" value="<?php echo set_value('nama_wisata')?>" required>
-							</div>
-						</div>
-
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label"></label>
 							<div class="col-md-5">
-								<button class="btn btn-success btn-lg" name="submit" type="submit">
+								<button class="btn btn-success btn-sm" name="submit" type="submit">
 									<i class="fa fa-save"></i> Simpan
 								</button>
 
-								<button class="btn btn-info btn-lg" name="reset" type="reset">
+								<button class="btn btn-info btn-sm" name="reset" type="reset">
 									<i class="fa fa-times"></i> Reset
 								</button>
 
@@ -168,3 +165,4 @@
 			</section>
 			<!-- /.content -->
 		</div>
+	</section>

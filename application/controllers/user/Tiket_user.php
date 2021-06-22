@@ -22,10 +22,8 @@ class Tiket_user extends CI_Controller {
 	}
 
 
-	
-
 
 }
 
-/* End of file Tiket.php */
-/* Location: ./application/controllers/admin/Tiket.php */
+/* End of file Tiket_user.php */
+/* Location: ./application/controllers/admin/Tiket_user.php */
