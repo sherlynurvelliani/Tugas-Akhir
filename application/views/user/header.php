@@ -22,6 +22,7 @@
 
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url('') ?>assets/assets/css/style.css" rel="stylesheet">
+	<script src="<?=base_url('assets')?>/assets/vendor/jquery/jquery.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Avilon - v2.2.1
