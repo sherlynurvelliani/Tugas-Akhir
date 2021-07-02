@@ -76,5 +76,55 @@
 		});
 	});
 </script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("input#jml_dewasa").blur(function () {
+			var jml = $(this).val();
+			var tipe = 'Dewasa';
+			$.ajax({
+				url: "<?php echo site_url();?>/user/pengunjung_user/cek_harga/" + tipe + "/" + jml,
+				type: "GET",
+				success: function (result) {
+					$('#jml_harga_dewasa').val(result);
+					var jml_tiket = (parseInt($('#jml_dewasa').val()) + parseInt($('#jml_anak').val()) + parseInt($('#jml_wna').val()));
+					$('#jumlah_tiket').val(jml_tiket)
+					var jml_harga_tiket = (parseInt($('#jml_harga_dewasa').val()) + parseInt($('#jml_harga_anak').val()) + parseInt($('#jml_harga_wna').val()));
+					$('#total_harga').val(jml_harga_tiket)
+				}
+			})
+		});
+		$("input#jml_anak").blur(function () {
+			var jml = $(this).val();
+			var tipe = 'Anak';
+			$.ajax({
+				url: "<?php echo site_url();?>/user/pengunjung_user/cek_harga/" + tipe + "/" + jml,
+				type: "GET",
+				success: function (result) {
+					$('#jml_harga_anak').val(result);
+					var jml_tiket = (parseInt($('#jml_dewasa').val()) + parseInt($('#jml_anak').val()) + parseInt($('#jml_wna').val()));
+					$('#jumlah_tiket').val(jml_tiket)
+					var jml_harga_tiket = (parseInt($('#jml_harga_dewasa').val()) + parseInt($('#jml_harga_anak').val()) + parseInt($('#jml_harga_wna').val()));
+					$('#total_harga').val(jml_harga_tiket)
+				}
+			})
+		});
+		$("input#jml_wna").blur(function () {
+			var jml = $(this).val();
+			var tipe = 'WNA';
+			$.ajax({
+				url: "<?php echo site_url();?>/user/pengunjung_user/cek_harga/" + tipe + "/" + jml,
+				type: "GET",
+				success: function (result) {
+					$('#jml_harga_wna').val(result);
+					var jml_tiket = (parseInt($('#jml_dewasa').val()) + parseInt($('#jml_anak').val()) + parseInt($('#jml_wna').val()));
+					$('#jumlah_tiket').val(jml_tiket)
+					var jml_harga_tiket = (parseInt($('#jml_harga_dewasa').val()) + parseInt($('#jml_harga_anak').val()) + parseInt($('#jml_harga_wna').val()));
+					$('#total_harga').val(jml_harga_tiket)
+				}
+			})
+		});
+	});
+</script>
 </body>
 </html>

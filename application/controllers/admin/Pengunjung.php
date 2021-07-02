@@ -9,12 +9,16 @@ class Pengunjung extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Pengunjung_model');
+		$this->load->model('Tiket_model');
 	}
 
 	//data pengunjung
 	public function index()
 	{
 		$pengunjung = $this->Pengunjung_model->listing();
+		// echo "<pre>";
+		// var_dump($pengunjung);
+		// die();
 		$data = array('title' => 'Data pengunjung',
 			'pengunjung' => $pengunjung,
 			'isi' => 'pengunjung/list'
@@ -22,9 +26,18 @@ class Pengunjung extends CI_Controller
 		$this->load->view('admin/wrapper', $data, FALSE);
 	}
 
+	public function tambah(){
+		$tiket = $this->Tiket_model->listing();
+
+		$data = array('title' => 'Tambah Data pengunjung',
+			'pengunjung' => $tiket,
+			'isi' => 'pengunjung/tambah'
+		);
+		$this->load->view('admin/wrapper', $data, FALSE);			
+	}
 
 	//tambah data pengunjung
-	public function tambah()
+	public function proses_tambah()
 	{
 //		echo '<pre>';
 //		var_dump($_POST);

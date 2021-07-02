@@ -12,6 +12,8 @@ class beranda extends CI_Controller {
 		$this->load->view('user/body', FALSE);
 		$this->load->view('user/footer', FALSE);
 	}
+
+	
 }
 
 /* End of file Beranda.php */

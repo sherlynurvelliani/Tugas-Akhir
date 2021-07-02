@@ -79,7 +79,7 @@ Main Sidebar Container -->
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url('admin/Pengunjung/tambah') ?>" class="nav-link">
+                <a href="<?php echo base_url('admin/Pengunjung/tambah')?>"class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data Pengunjung</p>
                 </a>
@@ -123,7 +123,7 @@ Main Sidebar Container -->
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url('admin/') ?>" class="nav-link">
+                <a href="<?php echo base_url('Laporan_pengunjung') ?>" class="nav-link">
                   <i class="nav-icon fas fa-list-alt"></i>
                   <p>Laporan Data Pengunjung</p>
                 </a>

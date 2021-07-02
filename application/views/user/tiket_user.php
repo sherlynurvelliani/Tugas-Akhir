@@ -173,7 +173,7 @@
           <div class="col-lg-4 col-md-4">
             <div class="contact-about">
               <h3>Narmada Park</h3>
-              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <!-- <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p> -->
               <div class="social-links">
                 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                 <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
@@ -190,7 +190,7 @@
 
               <div>
                 <i class="ion-ios-email-outline"></i>
-                <p>info@example.com</p>
+                <p>narmadapark@gmail.com</p>
               </div>
 
               <div>

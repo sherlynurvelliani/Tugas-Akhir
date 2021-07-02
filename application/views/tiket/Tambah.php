@@ -46,11 +46,11 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label"></label>
 							<div class="col-md-5">
-								<button class="btn btn-success btn-lg" name="submit" type="submit">
+								<button class="btn btn-success btn-sm" name="submit" type="submit">
 									<i class="fa fa-save"></i> Simpan
 								</button>
 
-								<button class="btn btn-info btn-lg" name="reset" type="reset">
+								<button class="btn btn-info btn-sm" name="reset" type="reset">
 									<i class="fa fa-times"></i> Reset
 								</button>
 

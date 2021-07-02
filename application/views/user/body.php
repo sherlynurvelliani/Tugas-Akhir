@@ -225,10 +225,9 @@
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
             <h3 class="cta-title">Pesan Tiketmu Sekarang Juga</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="<?php echo base_url("user/Pengunjung_user") ?>">Pesan Tiket</a>
+            <a class="cta-btn align-middle" href="<?php echo base_url('user/Pengunjung_user') ?>">Pesan Tiket</a>
           </div>
         </div>
 
@@ -258,6 +257,17 @@
                   <th>Tanggal</th>
                 </tr>
               </thead>
+              <!-- <tbody>
+                <?php $no=1; foreach ($Informasi as $Informasi){ ?>
+                  <tr>
+
+                    <td><?php echo $judul->judul ?></td>
+                    <td><?php echo $gambar->gambar ?></td>
+                    <td><?php echo $ket->ket ?></td>
+                    <td><?php echo $tanggal->tanggal ?></td>
+                  </tr>
+                  <?php $no++; } ?>
+                </tbody> -->
               </table>
             </div>
           </div>
@@ -491,7 +501,7 @@
           <div class="col-lg-4 col-md-4">
             <div class="contact-about">
               <h3>Narmada Park</h3>
-              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <!-- <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p> -->
               <div class="social-links">
                 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                 <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
@@ -508,7 +518,7 @@
 
               <div>
                 <i class="ion-ios-email-outline"></i>
-                <p>info@example.com</p>
+                <p>narmadapark@gmail.com</p>
               </div>
 
               <div>

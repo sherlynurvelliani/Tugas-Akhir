@@ -41,7 +41,7 @@
 			<!-- Uncomment below if you prefer to use an image logo -->
 			<!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a> -->
 		</div>
-
+ 
 		<nav id="nav-menu-container">
 			<ul class="nav-menu">
 				<li class="menu-active"><a href="#intro">Home</a></li>

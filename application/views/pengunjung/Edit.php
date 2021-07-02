@@ -23,7 +23,7 @@
 								<input type="text" name="id_booking" class="form-control" placeholder="id booking" value="<?php echo $pengunjung->id_booking ?> " required>
 							</div>
 						</div>
-
+ 
 						<!-- nama pengunjung -->
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Nama Lengkap</label>

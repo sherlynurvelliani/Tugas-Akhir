@@ -14,7 +14,7 @@ class Pengunjung_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tabel_pengunjung');
-		$this->db->order_by('id_booking','asc');
+		$this->db->order_by('create_at','desc');
 		$query = $this->db->get();
 		return $query->result();
 	}
