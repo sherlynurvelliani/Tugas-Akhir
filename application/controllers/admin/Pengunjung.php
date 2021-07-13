@@ -65,12 +65,8 @@ class Pengunjung extends CI_Controller
 	public function edit($id_booking)
 	{
 		$pengunjung = $this->Pengunjung_model->detail($id_booking);
-		//validasi input
+		// validasi input
 		$valid = $this->form_validation;
-
-		$valid->set_rules('id_booking', 'id_booking', 'required',
-			array('required' => '%s Harus Diisi'));
-
 		$valid->set_rules('nama', 'nama', 'required',
 			array('required' => '%s Harus Diisi'));
 
@@ -80,13 +76,10 @@ class Pengunjung extends CI_Controller
 		$valid->set_rules('tanggal', 'tanggal', 'required',
 			array('required' => '%s Harus Diisi'));
 
-		$valid->set_rules('kategori', 'kategori', 'required',
+		$valid->set_rules('catatan', 'catatan', 'required',
 			array('required' => '%s Harus Diisi'));
 
-		$valid->set_rules('jumlah', 'jumlah', 'required',
-			array('required' => '%s Harus Diisi'));
-
-		$valid->set_rules('harga', 'harga', 'required',
+		$valid->set_rules('status_bayar', 'status_bayar', 'required',
 			array('required' => '%s Harus Diisi'));
 
 		if ($valid->run() === FALSE) {
@@ -97,13 +90,18 @@ class Pengunjung extends CI_Controller
 			$this->load->view('admin/wrapper', $data, FALSE);
 		} else {
 			$i = $this->input;
-			$data = array('id_booking' => $id_booking,
+			$data = array(
+				'id_booking'=> $id_booking,
 				'nama' => $i->post('nama'),
 				'no_hp' => $i->post('no_hp'),
 				'tanggal' => $i->post('tanggal'),
-				'kategori' => $i->post('kategori'),
-				'jumlah' => $i->post('jumlah'),
-				'harga' => $i->post('harga'),
+				'jml_anak' => $i->post('jml_anak'),
+				'jml_dewasa' => $i->post('jml_dewasa'),
+				'jml_wna' => $i->post('jml_wna'),
+				'jumlah_pengunjung' => $i->post('jumlah_tiket'),
+				'total_harga' => $i->post('total_harga'),
+				'status_bayar' => $i->post('status_bayar'),
+				'catatan' => $i->post('catatan'),
 			);
 			$this->Pengunjung_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data Telah di Edit');

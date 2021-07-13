@@ -12,7 +12,7 @@ class Informasi extends CI_Controller {
 	public function index()
 	{
 		$informasi = $this->Informasi_model->listing();
-		$data = array('title' => 'Data Informasi', 
+		$data = array('title' => 'Data Berita', 
 			'informasi' => $informasi,
 			'isi'	=> 'informasi/list'
 		);
@@ -33,29 +33,44 @@ class Informasi extends CI_Controller {
 		
 		if ($valid->run()===FALSE) {
 			//end validasi
-			$data = array('title' => 'Tambah Data Informasi', 
+			$data = array('title' => 'Tambah Data Berita', 
 				'isi'	=> 'informasi/tambah'
 			);
 			$this->load->view('admin/wrapper', $data, FALSE);
 		}else{
-			$i = $this->input;
-			$data = array(
+			
+			$config['upload_path']          = './assets/upload/informasi/';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['encrypt_name']			= FALSE;
+            $config['file_size']            = 10024;
+            $config['overwrite']            = FALSE;
+
+            // $this->load->library('upload');
+            $this->upload->initialize($config);
+
+            if (!$this->upload->do_upload('gambar')){
+				var_dump($this->upload->display_errors()); die();
+            } else {
+            	$i = $this->input;
+            	$gambar = $this->upload->data('file_name');
+				$data = array(
 				'id_informasi' => $i->post('id_informasi'),
 				'judul' => $i->post('judul'),
-				'gambar' => $i->post('gambar'),
+				'gambar' => $gambar,
 				'ket' => $i->post('ket'),
 				'tanggal' => $i->post('tanggal')
 			);
 			$this->Informasi_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data Telah di Tambahkan');
 			redirect(base_url('admin/informasi'),'refresh');
+            }
 		}
 	}
 
 
 	//Edit Informais
 	public function edit($id_informasi){
-		$supplier = $this->Pengunjung_model->detail($id_informasi);
+		$informasi = $this->Informasi_model->detail($id_informasi);
 		//validasi input
 		$valid = $this->form_validation;
 

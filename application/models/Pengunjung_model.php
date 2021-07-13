@@ -42,7 +42,11 @@ class Pengunjung_model extends CI_Model {
 		$this->db->update('tabel_pengunjung',$data);
 	}
 
-	
+	public function satuData($value)
+	{
+		return $this->db->where(['id_booking'=> $value])->get('tabel_pengunjung')->row_object();
+
+	}
 	
 
 	//hapus data
@@ -52,6 +56,12 @@ class Pengunjung_model extends CI_Model {
 		return $this->db->delete('tabel_pengunjung',$data);
 	}
 
+
+	public function getMAx($table=null, $field=null)
+	{
+		$this->db->select_max($field);
+		return $this->db->get($table)->row_array()[$field];
+	}
 
 }
 

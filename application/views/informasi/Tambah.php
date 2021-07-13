@@ -12,31 +12,31 @@
 						echo validation_errors('<div class="alert alert-warning">','</div>');
 
 //form open
-						echo form_open(base_url('admin/informasi/tambah'),' class="form-horizontal"');
+						// echo form_open(base_url('admin/informasi/tambah'),' class="form-horizontal"');
 						?>
 					
-
+					<?php echo form_open_multipart(base_url('admin/informasi/tambah'));?>
 						<!-- id informasi -->
 						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Id Informasi</label>
+							<label class="col-md-2 col-form-label">Id Berita</label>
 							<div class="col-md-5">
-								<input type="text" name="id_informasi" class="form-control" placeholder="id informasi" value="<?php echo set_value('id_informasi')?>" required>
+								<input type="text" name="id_informasi" class="form-control" placeholder="id berita" value="<?php echo set_value('id_informasi')?>" required>
 							</div>
 						</div>
 
 						<!-- judul informasi -->
 						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Judul Informasi</label>
+							<label class="col-md-2 col-form-label">Judul Berita</label>
 							<div class="col-md-5">
-								<input type="text" name="judul" class="form-control" placeholder="judul informasi" value="<?php echo set_value('judul')?>" required>
+								<input type="text" name="judul" class="form-control" placeholder="judul berita" value="<?php echo set_value('judul')?>" required>
 							</div>
 						</div>
-
+ 
 						<!-- gambar -->
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Gambar</label>
 							<div class="col-md-5">
-								<input type="text" name="gambar" class="form-control" placeholder="gambar" value="<?php echo set_value('gambar')?>" required>
+								<input type="file" name="gambar" placeholder="gambar" value="<?php echo set_value('gambar')?>" required>
 							</div>
 						</div>
 
@@ -59,11 +59,11 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label"></label>
 							<div class="col-md-5">
-								<button class="btn btn-success btn-lg" name="submit" type="submit">
+								<button class="btn btn-success btn-sm" name="submit" type="submit">
 									<i class="fa fa-save"></i> Simpan
 								</button>
 
-								<button class="btn btn-info btn-lg" name="reset" type="reset">
+								<button class="btn btn-info btn-sm" name="reset" type="reset">
 									<i class="fa fa-times"></i> Reset
 								</button>
 

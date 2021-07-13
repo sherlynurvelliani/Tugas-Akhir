@@ -7,9 +7,9 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?php echo base_url('') ?>assets/assets/img/favicon.png" rel="icon">
+  <link href="<?php echo base_url('') ?>assets/assets/img/lotus_50px.png" rel="icon">
   <link href="<?php echo base_url('') ?>assets/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  
   <!-- Google Fonts -->
   <link href="<?php echo base_url('') ?>https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
@@ -17,11 +17,13 @@
   <link href="<?php echo base_url('') ?>assets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="<?php echo base_url('') ?>assets/assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="<?php echo base_url('') ?>assets/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link href="<?php echo base_url('') ?>assets/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="<?php echo base_url('') ?>assets/assets/vendor/venobox/venobox.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url('') ?>assets/assets/css/style.css" rel="stylesheet">
+  <script src="<?=base_url('assets')?>/assets/vendor/jquery/jquery.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Avilon - v2.2.1
@@ -49,6 +51,7 @@
           <li><a href="<?php echo base_url('user/Pengunjung_user') ?>">Pesan Tiket</a></li>
           <li><a href="#gallery">Galeri</a></li>
           <li><a href="#contact">Hubungi kami</a></li>
+          <li><a href="<?= base_url('Login')?>">Masuk</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -59,13 +62,13 @@
   <section id="intro">
 
     <div class="intro-text">
-      <h2>Informasi Paket & Tiket Narmada Park</h2>
+      <h2>Informasi Tiket Narmada Park</h2>
       
     </div>
   </section><!-- End Intro Section -->
 
   <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="section-bg">
+    <!-- <section id="pricing" class="section-bg">
       <div class="container">
 
         <div class="section-header">
@@ -119,15 +122,15 @@
 
         </div>
 
-      </section>
+      </section> -->
   <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq">
       <div class="container">
 
         <div class="section-header">
           <h3 class="section-title">Tiket</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">Tiket terpisah yang tersedia pada Narmada Park</p>
+          <!-- <span class="section-divider"></span>
+          <p class="section-description">Tiket terpisah yang tersedia pada Narmada Park</p> -->
         </div>
     </section>
 
@@ -153,7 +156,7 @@
                   <tr>
                     <td><?php echo $no ?></td>
                     <td><?php echo $tiket->kategori ?></td>
-                    <td><?php echo $tiket->harga ?></td>
+                    <td><?php echo 'Rp ' . number_format ($tiket->harga) ?></td>
                     
                     
                   </tr>

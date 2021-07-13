@@ -11,13 +11,14 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li class="menu-active"><a href="<?php echo base_url('wisatanarmada/index') ?>">Home</a></li>
           <li><a href="#about">Profil</a></li>
           <li><a href="#features">Informasi</a></li>
           <li><a href="<?php echo base_url('user/Tiket_user') ?>">Tiket</a></li>
           <li><a href="<?php echo base_url('user/Pengunjung_user') ?>">Pesan Tiket</a></li>
           <li><a href="#gallery">Galeri</a></li>
           <li><a href="#contact">Hubungi kami</a></li>
+          <li><a href="<?php echo base_url('Login')?>">Masuk</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -27,7 +28,7 @@
   <section id="intro">
 
     <div class="intro-text">
-      <h2>Welcome to Narmada Park </h2>
+      <h2>Selamat Datang Di Taman Narmada</h2>
       <a href="#about" class="btn-get-started scrollto">Jelahi</a>
     </div>
 
@@ -72,15 +73,15 @@
     <section id="features">
       <div class="container">
 
-          <div class="col-lg-8 offset-lg-4">
-            <div class="section-header wow fadeIn" data-wow-duration="1s">
-              <h3 class="section-title">Tips Mengunjungi Taman Narmada</h3>
-              <p>Jika ingin berkunjung, ada beberapa tips ini perlu kamu perhatikan, diantaranya:</p>
-              <span class="section-divider"></span>
-            </div>
-          </div>
+          <div class="section-header">
+          <h2 class="section-title">Aktivitas Menarik di Taman Narmada</h2>
+          <span class="section-divider"></span>
+          <p class="section-description">
+           Beragam aktivitas yang dapat dilakukan ketika sedang berkunjung ke Taman Narmada ini. Beberapa diantaranya seperti berikut:
+          </p>
+        </div>
 
-          <div class="col-lg-8 col-md-7 ">
+          <!-- <div class="col-lg-8 col-md-7 ">
 
             <div class="row">
 
@@ -111,26 +112,29 @@
               </div>
             </div>
 
-          </div>
+          </div> -->
 
         </div>
 
       </div>
 
-    </section><!-- End Featuress Section -->
+    </section>
+    <!-- End Featuress Section -->
 
     <!-- ======= Advanced Featuress Section ======= -->
     <section id="advanced-features">
 
       <div class="features-row section-bg">
         <div class="container">
-          <div class="section-header">
+
+          <!-- <div class="section-header">
           <h2 class="section-title">Aktivitas Menarik di Taman Narmada</h2>
           <span class="section-divider"></span>
           <p class="section-description">
            Beragam aktivitas yang dapat dilakukan ketika sedang berkunjung ke Taman Narmada ini. Beberapa diantaranya seperti berikut:
           </p>
-        </div>
+        </div> -->
+        
           <div class="row">
             <div class="col-12">
               <img class="advanced-feature-img-right wow fadeInRight" src="<?=base_url('assets/')?>assets/img/awg.jpg" alt="">
@@ -257,17 +261,17 @@
                   <th>Tanggal</th>
                 </tr>
               </thead>
-              <!-- <tbody>
-                <?php $no=1; foreach ($Informasi as $Informasi){ ?>
+              <tbody>
+                <?php $no=1; foreach ( $user as $key){ ?>
                   <tr>
-
-                    <td><?php echo $judul->judul ?></td>
-                    <td><?php echo $gambar->gambar ?></td>
-                    <td><?php echo $ket->ket ?></td>
-                    <td><?php echo $tanggal->tanggal ?></td>
+                    <td class="text-center"><?php echo $no ?></td>
+                    <td><?php echo $key->judul ?></td>
+                    <td class="text-center"> <img src="<?= base_url('assets/upload/informasi/')?><?php echo $key->gambar ?>" width="150px" height="100px"></td>
+                    <td><?php echo $key->ket ?></td>
+                    <td><?php echo $key->tanggal ?></td>
                   </tr>
                   <?php $no++; } ?>
-                </tbody> -->
+                </tbody>
               </table>
             </div>
           </div>

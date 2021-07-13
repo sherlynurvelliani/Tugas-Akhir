@@ -16,7 +16,7 @@
 						echo form_open(base_url('admin/tiket/edit/'.$tiket->id_tiket));
 						?>
 
-						
+						 
 
 						<!-- id tiket -->
 						<div class="form-group row">
@@ -38,7 +38,7 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Harga</label>
 							<div class="col-md-5">
-								<input type="number" name="harga" class="form-control" placeholder="harga" value="<?php echo $tiket->harga?>" required>
+								<input type="text" name="harga" class="form-control" placeholder="harga" value="<?php echo $tiket->harga?>" required>
 							</div>
 						</div>
 
@@ -48,11 +48,11 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label"></label>
 							<div class="col-md-5">
-								<button class="btn btn-success btn-lg" name="submit" type="submit">
+								<button class="btn btn-success btn-sm" name="submit" type="submit">
 									<i class="fa fa-save"></i>Simpan
 								</button>
 
-								<button class="btn btn-info btn-lg" name="reset" type="reset">
+								<button class="btn btn-info btn-sm" name="reset" type="reset">
 									<i class="fa fa-times"></i>Reset
 								</button>
 

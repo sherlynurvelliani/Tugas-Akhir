@@ -28,7 +28,7 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">No Hp</label>
 									<div class="col-md-5">
-										<input type="number" name="no_hp" class="form-control" placeholder="No hp"
+										<input type="text" name="no_hp" class="form-control" placeholder="No hp"
 											   value="<?php echo set_value('no_hp')?>"required>
 									</div>
 								</div>

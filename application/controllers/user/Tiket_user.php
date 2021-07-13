@@ -18,6 +18,7 @@ class Tiket_user extends CI_Controller {
 			'tiket' => $tiket,
 			'isi'	=> 'tiket/list'
 		);
+		
 		$this->load->view('user/tiket_user', $data, FALSE);
 	}
 

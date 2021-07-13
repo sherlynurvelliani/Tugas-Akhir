@@ -18,7 +18,7 @@
 						?>
 						<!-- id informasi -->
 						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Id Informasi</label>
+							<label class="col-md-2 col-form-label">Id Berita</label>
 							<div class="col-md-5">
 								<input type="text" name="id_informasi" class="form-control" placeholder="id informasi" value="<?php echo $informasi->id_informasi ?> " readonly>
 							</div>
@@ -26,9 +26,9 @@
 
 						<!-- judul informasi -->
 						<div class="form-group row">
-							<label class="col-md-2 col-form-label">Judul Informasi</label>
+							<label class="col-md-2 col-form-label">Judul Berita</label>
 							<div class="col-md-5">
-								<input type="text" name="judul" class="form-control" placeholder="judul informasi" value="<?php echo $informasi->judul ?> " readonly>
+								<input type="text" name="judul" class="form-control" placeholder="judul informasi" value="<?php echo $informasi->judul ?> " >
 							</div>
 						</div>
 
@@ -36,7 +36,7 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Gambar</label>
 							<div class="col-md-5">
-								<input type="text" name="gambar" class="form-control" value="<?php echo $informasi->gambar?> " required>
+								<input type="file" name="gambar" placeholder="gambar" value="<?php echo $informasi->gambar?> " required>
 							</div>
 						</div>
 
@@ -60,11 +60,11 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label"></label>
 							<div class="col-md-5">
-								<button class="btn btn-success btn-lg" name="submit" type="submit">
+								<button class="btn btn-success btn-sm" name="submit" type="submit">
 									<i class="fa fa-save"></i>Simpan
 								</button>
 
-								<button class="btn btn-info btn-lg" name="reset" type="reset">
+								<button class="btn btn-info btn-sm" name="reset" type="reset">
 									<i class="fa fa-times"></i>Reset
 								</button>
 

@@ -21,8 +21,8 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Id Informasi</th>
-                  <th>Judul Informasi</th>
+                  <th>Id Berita</th>
+                  <th>Judul Berita</th>
                   <th>Gambar</th>
                   <th>Keterangan</th>
                   <th>Tanggal</th>

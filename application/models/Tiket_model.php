@@ -21,7 +21,7 @@ class Tiket_model extends CI_Model {
 //detail tiket
 	public function detail($id_tiket)
 	{
-		$this->db->select('*');
+		$this->db->where('id_tiket',$id_tiket);
 		$this->db->from('tabel_tiket');
 		
 		$this->db->order_by('id_tiket','asc');

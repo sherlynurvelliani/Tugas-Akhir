@@ -34,7 +34,7 @@
                     <td><?php echo $no ?></td>
                     <td><?php echo $tiket->id_tiket ?></td>
                     <td><?php echo $tiket->kategori ?></td>
-                    <td><?php echo $tiket->harga ?></td>
+                    <td><?php echo 'Rp ' . number_format ($tiket->harga) ?></td>
                     
                     <td>
                       <a href="<?php echo base_url('admin/tiket/edit/'.$tiket->id_tiket) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
