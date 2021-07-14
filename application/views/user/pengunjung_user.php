@@ -103,7 +103,7 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">Nama Pengunjung</label>
 									<div class="col-md-5">
-										<input type="text" name="nama" class="form-control"
+										<input type="text" required="" name="nama" class="form-control"
 											   placeholder="Nama Pengunjung" value="<?php echo set_value('nama') ?>">
 									</div>
 								</div>
@@ -112,7 +112,7 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">No Hp</label>
 									<div class="col-md-5">
-										<input type="text" name="no_hp" class="form-control" placeholder="No hp"
+										<input type="text" required="" name="no_hp" class="form-control" placeholder="No hp"
 											   value="<?php echo set_value('no_hp') ?>">
 									</div>
 								</div>
@@ -144,7 +144,7 @@
 								<div class="form-group row">
 									<label for="inputkt" class="col-md-2 col-form-label">Anak - anak</label>
 									<div class="col-md-2">
-										<input type="number" value="0" min="1" id="jml_anak" name="jml_anak"
+										<input type="number" value="0" id="jml_anak" name="jml_anak"
 											   class="form-control">
 									</div>
 									<div class="col-md-2">
@@ -157,7 +157,7 @@
 								<div class="form-group row">
 									<label for="inputkt" class="col-md-2 col-form-label">WNA</label>
 									<div class="col-md-2">
-										<input type="number" min="1" value="0" id="jml_wna" name="jml_wna"
+										<input type="number" value="0" id="jml_wna" name="jml_wna"
 											   class="form-control">
 									</div>
 									<div class="col-md-2">

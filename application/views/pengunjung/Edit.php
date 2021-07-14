@@ -65,7 +65,7 @@
 									   value="<?php echo $pengunjung->jml_anak; ?>">
 							</div>
 							<div class="col-md-2">
-								<input readonly type="number" id="jml_harga_anak" name="jml_harga_anak"
+								<input readonly type="number" value="0" id="jml_harga_anak" name="jml_harga_anak"
 									   class="form-control">
 							</div>
 						</div>
