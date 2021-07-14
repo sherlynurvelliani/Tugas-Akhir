@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pengunjung_user extends CI_Controller {
+class Pengunjung_user extends CI_Controller
+{
 
 
 	public function __construct()
@@ -10,14 +11,15 @@ class Pengunjung_user extends CI_Controller {
 		$this->load->model('Pengunjung_model');
 		$this->load->model('Tiket_model', 'tm');
 	}
+
 	//data pengunjung
 	public function index()
 	{
 		$tiket = $this->tm->listing();
 		$data = array(
-			'title' => 'Data pengunjung', 
+			'title' => 'Data pengunjung',
 			'tiket' => $tiket,
-			'isi'	=> 'pengunjung/list'
+			'isi' => 'pengunjung/list'
 		);
 		$this->load->view('user/pengunjung_user', $data, FALSE);
 
@@ -25,8 +27,8 @@ class Pengunjung_user extends CI_Controller {
 
 	public function cek_harga($tipe, $jml)
 	{
-		$data = $this->db->get_where('tabel_tiket', ['kategori'=> $tipe])->row_object();
-		echo $data->harga*$jml;
+		$data = $this->db->get_where('tabel_tiket', ['kategori' => $tipe])->row_object();
+		echo $data->harga * $jml;
 	}
 
 
@@ -38,11 +40,11 @@ class Pengunjung_user extends CI_Controller {
 		$field = "id_booking";
 
 		$lastkode = $this->Pengunjung_model->getMax($table, $field);
-		$no = (int) substr($lastkode, -4, 4);
+		$no = (int)substr($lastkode, -4, 4);
 		$no++;
 
 		$ket = TN;
-		$kode = $ket .'-'. sprintf('%04s', $no);
+		$kode = $ket . '-' . sprintf('%04s', $no);
 
 		$i = $this->input;
 		$data = array(
@@ -60,12 +62,12 @@ class Pengunjung_user extends CI_Controller {
 		$this->Pengunjung_model->tambah($data);
 		$key = $this->db->insert_id();
 		$this->session->set_flashdata('sukses', 'Data Telah di Tambahkan');
-		redirect(base_url('user/pengunjung_user/report/'.$kode));
+		redirect(base_url('user/pengunjung_user/report/' . $kode));
 	}
 
 	function report($key)
 	{
 		$pengunjung['isi'] = $this->Pengunjung_model->satuData($key);
 		$this->load->view('user/bukti', $pengunjung);
-	}	
+	}
 }

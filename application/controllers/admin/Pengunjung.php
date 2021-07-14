@@ -26,24 +26,32 @@ class Pengunjung extends CI_Controller
 		$this->load->view('admin/wrapper', $data, FALSE);
 	}
 
-	public function tambah(){
+	public function tambah()
+	{
 		$tiket = $this->Tiket_model->listing();
 
 		$data = array('title' => 'Tambah Data pengunjung',
 			'pengunjung' => $tiket,
 			'isi' => 'pengunjung/tambah'
 		);
-		$this->load->view('admin/wrapper', $data, FALSE);			
+		$this->load->view('admin/wrapper', $data, FALSE);
 	}
 
 	//tambah data pengunjung
 	public function proses_tambah()
 	{
-//		echo '<pre>';
-//		var_dump($_POST);
-//		die();
+		$table = "tabel_pengunjung";
+		$field = "id_booking";
+
+		$lastkode = $this->Pengunjung_model->getMax($table, $field);
+		$no = (int)substr($lastkode, -4, 4);
+		$no++;
+
+		$ket = 'TN';
+		$kode = $ket . '-' . sprintf('%04s', $no);
 		$i = $this->input;
 		$data = array(
+			'id_booking' => $kode,
 			'nama' => $i->post('nama'),
 			'no_hp' => $i->post('no_hp'),
 			'tanggal' => $i->post('tanggal'),
@@ -91,7 +99,7 @@ class Pengunjung extends CI_Controller
 		} else {
 			$i = $this->input;
 			$data = array(
-				'id_booking'=> $id_booking,
+				'id_booking' => $id_booking,
 				'nama' => $i->post('nama'),
 				'no_hp' => $i->post('no_hp'),
 				'tanggal' => $i->post('tanggal'),

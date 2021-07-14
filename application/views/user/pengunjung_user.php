@@ -11,7 +11,8 @@
 	<link href="<?php echo base_url('') ?>assets/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
-	<link href="<?php echo base_url('') ?>https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="<?php echo base_url('') ?>https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i"
+		  rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
 	<link href="<?php echo base_url('') ?>assets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +26,8 @@
 	<script src="<?= base_url('assets') ?>/assets/vendor/jquery/jquery.min.js"></script>
 
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
 	<!-- =======================================================
@@ -67,7 +69,7 @@
 	<div class="intro-text">
 		<h2>Pesan Tiket </h2>
 	</div>
-</section><!-- End Intro Section -->
+</section>
 
 <!-- ======= Pricing Section ======= -->
 <section id="pricing" class="section-bg">
@@ -101,7 +103,8 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">Nama Pengunjung</label>
 									<div class="col-md-5">
-										<input type="text" name="nama" class="form-control" placeholder="Nama Pengunjung" value="<?php echo set_value('nama') ?>">
+										<input type="text" name="nama" class="form-control"
+											   placeholder="Nama Pengunjung" value="<?php echo set_value('nama') ?>">
 									</div>
 								</div>
 
@@ -109,7 +112,8 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">No Hp</label>
 									<div class="col-md-5">
-										<input type="text" name="no_hp" class="form-control" placeholder="No hp" value="<?php echo set_value('no_hp') ?>">
+										<input type="text" name="no_hp" class="form-control" placeholder="No hp"
+											   value="<?php echo set_value('no_hp') ?>">
 									</div>
 								</div>
 
@@ -117,7 +121,9 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">Tanggal Pemesanan</label>
 									<div class="col-md-5">
-										<input type="date" name="tanggal" class="form-control" placeholder="tanggal pemesanan" value="<?php echo set_value('tanggal') ?>" required>
+										<input type="date" name="tanggal" class="form-control" min="<?=date('Y-m-d');?>"
+											   placeholder="tanggal pemesanan"
+											   value="<?php echo set_value('tanggal') ?>" required>
 									</div>
 								</div>
 
@@ -125,10 +131,12 @@
 								<div class="form-group row">
 									<label for="inputkt" class="col-md-2 col-form-label">Dewasa</label>
 									<div class="col-md-2">
-										<input type="number" value="0" min="1" id="jml_dewasa" name="jml_dewasa" class="form-control">
+										<input type="number" value="0" min="1" id="jml_dewasa" name="jml_dewasa"
+											   class="form-control">
 									</div>
 									<div class="col-md-2">
-										<input readonly type="text" value="0" id="jml_harga_dewasa" name="jml_harga_dewasa" class="form-control">
+										<input readonly type="text" value="0" id="jml_harga_dewasa"
+											   name="jml_harga_dewasa" class="form-control">
 									</div>
 								</div>
 
@@ -136,10 +144,12 @@
 								<div class="form-group row">
 									<label for="inputkt" class="col-md-2 col-form-label">Anak - anak</label>
 									<div class="col-md-2">
-										<input type="number" value="0" min="1" id="jml_anak" name="jml_anak" class="form-control">
+										<input type="number" value="0" min="1" id="jml_anak" name="jml_anak"
+											   class="form-control">
 									</div>
 									<div class="col-md-2">
-										<input readonly type="number" value="0" id="jml_harga_anak" name="jml_harga_anak" class="form-control">
+										<input readonly type="number" value="0" id="jml_harga_anak"
+											   name="jml_harga_anak" class="form-control">
 									</div>
 								</div>
 
@@ -147,10 +157,12 @@
 								<div class="form-group row">
 									<label for="inputkt" class="col-md-2 col-form-label">WNA</label>
 									<div class="col-md-2">
-										<input type="number" min="1" value="0" id="jml_wna" name="jml_wna" class="form-control">
+										<input type="number" min="1" value="0" id="jml_wna" name="jml_wna"
+											   class="form-control">
 									</div>
 									<div class="col-md-2">
-										<input readonly type="number" value="0" id="jml_harga_wna" name="jml_harga_wna" class="form-control">
+										<input readonly type="number" value="0" id="jml_harga_wna" name="jml_harga_wna"
+											   class="form-control">
 									</div>
 								</div>
 
@@ -158,7 +170,9 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">Jumlah Tiket</label>
 									<div class="col-md-5">
-										<input readonly type="text" name="jumlah_tiket" class="form-control" placeholder="jumlah tiket" id="jumlah_tiket" value="<?php echo set_value('jumlah_tiket') ?>" required>
+										<input readonly type="text" name="jumlah_tiket" class="form-control"
+											   placeholder="jumlah tiket" id="jumlah_tiket"
+											   value="<?php echo set_value('jumlah_tiket') ?>" required>
 									</div>
 								</div>
 
@@ -167,7 +181,9 @@
 								<div class="form-group row">
 									<label class="col-md-2 col-form-label">Total Harga</label>
 									<div class="col-md-5">
-										<input readonly type="text" name="total_harga" class="form-control" placeholder="total harga" id="total_harga" value="<?php echo set_value('total_harga') ?>" required>
+										<input readonly type="text" name="total_harga" class="form-control"
+											   placeholder="total harga" id="total_harga"
+											   value="<?php echo set_value('total_harga') ?>" required>
 									</div>
 								</div>
 
@@ -208,17 +224,19 @@
 
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		$("input#jml_dewasa").blur(function() {
+	$(document).ready(function () {
+		$("input#jml_dewasa").blur(function () {
 			var jml = $(this).val();
 			var tipe = 'Dewasa';
 			$.ajax({
 				url: "<?php echo site_url(); ?>/user/pengunjung_user/cek_harga/" + tipe + "/" + jml,
 				type: "GET",
-				success: function(result) {
+				success: function (result) {
 					$('#jml_harga_dewasa').val(result);
 					var jml_tiket = (parseInt($('#jml_dewasa').val()) + parseInt($('#jml_anak').val()) + parseInt($('#jml_wna').val()));
 					$('#jumlah_tiket').val(jml_tiket)
@@ -227,13 +245,13 @@
 				}
 			})
 		});
-		$("input#jml_anak").blur(function() {
+		$("input#jml_anak").blur(function () {
 			var jml = $(this).val();
 			var tipe = 'Anak';
 			$.ajax({
 				url: "<?php echo site_url(); ?>/user/pengunjung_user/cek_harga/" + tipe + "/" + jml,
 				type: "GET",
-				success: function(result) {
+				success: function (result) {
 					$('#jml_harga_anak').val(result);
 					var jml_tiket = (parseInt($('#jml_dewasa').val()) + parseInt($('#jml_anak').val()) + parseInt($('#jml_wna').val()));
 					$('#jumlah_tiket').val(jml_tiket)
@@ -242,13 +260,13 @@
 				}
 			})
 		});
-		$("input#jml_wna").blur(function() {
+		$("input#jml_wna").blur(function () {
 			var jml = $(this).val();
 			var tipe = 'WNA';
 			$.ajax({
 				url: "<?php echo site_url(); ?>/user/pengunjung_user/cek_harga/" + tipe + "/" + jml,
 				type: "GET",
-				success: function(result) {
+				success: function (result) {
 					$('#jml_harga_wna').val(result);
 					var jml_tiket = (parseInt($('#jml_dewasa').val()) + parseInt($('#jml_anak').val()) + parseInt($('#jml_wna').val()));
 					$('#jumlah_tiket').val(jml_tiket)
