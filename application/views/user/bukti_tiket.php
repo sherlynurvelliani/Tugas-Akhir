@@ -1,54 +1,100 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>print</title>
-    <style>
-        body {
-            font-family: calibri;
-            font-size: 13px;
-        }
-
-        table {
-            border-collapse: collapse;
-            background: none;
-        }
-
-        h3 {
-            text-align: center;
-        }
-
-        th,
-        td {
-            border: 1px solid #999;
-        }
-
-        th {
-            padding: 8px 0;
-            background: none;
-        }
-
-        td {
-            padding: 4px 8px;
-        }
-    </style>
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>dist/css/bootstrap.min.css">
-</head>
-
-<body onload="window.print()">
-    <h1 style="text-align: center;">WISATA TAMAN NARMADA</h1>
-    <h6 style="text-align: center">Jl. Raya Mataram - Labuhan Lombok, Lembuak, Narmada, Kabupaten Lombok Barat, Nusa Tenggara Barat. 83371</h6>
-    <hr size="10px">
-
-    <h3 style="text-align: center;">BUKTI PEMESANAN</h3>
-    <!-- <h3 style="text-align: center;"><?php echo $title ?></h3> -->
-    <!-- <h4 style="text-align: center;"><?php echo $subtitle ?></h4> -->
-    <!-- <h3 style="text-align: center;"><?php echo $judul ?></h3> -->
-
-    <hr size="10px">
-
-
-</body>
-<h3>nama</h3>
-
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bukti Pesanan</title>
+    </head>
+    <body> 
+        <div style="margin-left:1cm; margin-right:1cm;">
+            <table width="100%"> 
+                <th>
+                    <tr>
+                        <td>
+                            <img src="<?=base_url('assets/assets/img/lotus_50px.png')?>"> 
+                        </td>
+                        <td>
+                            <p style="font-family: Bookman Old Style; text-align:center; font-size:20px;">PEMERINTAHAN KABUPATEN LOMBOK BARAT</h4>
+                            <center style="text-align:justify;font-family: Bookman Old Style; font-size:20px;">TAMAN WISATA NARMADA</center>
+                            <small>Jl. Raya Mataram - Labuhan Lombok, Lembuak, Narmada, Kabupaten Lombok Barat, Nusa Tenggara Barat. 83371</small>
+                        </td>
+                    </tr>
+                </th>
+            </table><hr style="color:#000000; border : 2 solid"> <br><br>
+           <div>
+                <table style="margin-left:35%; margin-right:50px">
+                    <th>
+                        <tr>
+                            <th colspan="3"><h4><u>BUKTI PEMESANAN TIKET</u></h4></th>
+                        </tr>
+                    </th>
+                </table><br><br>
+                <table>
+                    <tr>
+                        <td>No. Pesanan </td>
+                        <td> :</td>
+                        <td><?= $isi->id_booking; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Pesanan </td>
+                        <td> :</td>
+                        <td><?= $isi->tanggal; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Pengunjung </td>
+                        <td> :</td>
+                        <td><?= $isi->nama; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Hp</td>
+                        <td>:</td>
+                        <td><?= $isi->no_hp; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Status Bayar</td>
+                        <td>:</td>
+                        <td><?= $isi->status_bayar; ?></td>
+                    </tr>
+                     <tr>
+                        <td>Jumlah Pengunjung</td>
+                        <td>:</td>
+                        <td><?= $isi->jumlah_pengunjung; ?> Orang</td>
+                    </tr>
+                     <tr>
+                        <td>Total Harga (Rp)</td>
+                        <td>:</td>
+                        <td><?= $isi->total_harga; ?></td>
+                    </tr>
+                     <tr>
+                        <td>Nominal Bayar (Rp)</td>
+                        <td>:</td>
+                        <td><?= $isi->total_harga; ?></td>
+                    </tr>
+                </table>
+                <table width="100%" style="border : 0.1 #000000 solid; margin-left:65%;">
+                    <thead>
+                        <th>
+                            <tr>
+                                <td>Narmada,<?= $isi->tanggal; ?></td>
+                            </tr>
+                            <tr>
+                                <td style="align-items: center;">Petugas</td>
+                            </tr>
+                        </th>
+                        <th>
+                            <tr>
+                                <td><br><br><br></td>
+                            </tr>
+                        </th>
+                        <th>
+                            <tr>
+                                <td><u>Admin</u></td>
+                            </tr>
+                        </th>
+                    </thead>
+                </table>
+           </div>
+        </div>
+    </body>
 </html>

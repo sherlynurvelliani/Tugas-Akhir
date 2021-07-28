@@ -36,7 +36,10 @@
 						<div class="form-group row">
 							<label class="col-md-2 col-form-label">Gambar</label>
 							<div class="col-md-5">
-								<input type="file" name="gambar" placeholder="gambar" value="<?php echo $informasi->gambar?> " required>
+								<input type="file" name="gambar" placeholder="gambar">
+								<div class="col-md-12">
+								<img src="<?=base_url('assets/upload/informasi/')?><?= $informasi->gambar;?>" width="75px" height="75px">
+							</div>
 							</div>
 						</div>
 

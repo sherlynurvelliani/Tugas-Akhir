@@ -13,7 +13,7 @@ class Mlaporan extends CI_Model
 
 	function bytanggal($tanggalawal, $tanggalakhir)
 	{
-		$query = $this->db->query("SELECT * FROM tabel_pengunjung WHERE tanggal BETWEEN '$tanggalawal' AND '$tanggalakhir' ORDER BY tanggal ASC");
+		$query = $this->db->query("SELECT*FROM tabel_pengunjung WHERE tanggal BETWEEN '$tanggalawal' AND '$tanggalakhir' ORDER BY tanggal ASC");
 
 		return $query->result();
 
@@ -33,6 +33,36 @@ class Mlaporan extends CI_Model
 
 		return $query->result();
 
+	}
+
+	function jumlah_pengunjung()
+	{
+		$this->db->select_sum('jumlah_pengunjung');
+		// $this->db->where('tanggal');
+		$this->db->order_by('tanggal','asc');
+		$query = $this->db->get('tabel_pengunjung');
+		if ($query->num_rows() > 0 ) {
+			return $query->row()->jumlah_pengunjung;
+		} else {
+			return 0 ;
+		}
+		// $query = $this->db->query("SELECT SUM('jumlah_pengunjung') AS JMLP FROM tabel_pengunjung WHERE tanggal BETWEEN '$tanggalawal' AND '$tanggalakhir' ORDER BY tanggal ASC");
+		// return $query->result();
+		
+	}
+	function total_pendapatan()
+	{
+		$this->db->select_sum('total_harga');
+		// $this->db->where('tanggal',$tanggalawal);
+		// $this->db->where('tanggal',$tanggalakhir);
+		$this->db->order_by('tanggal','asc');
+
+		$query = $this->db->get('tabel_pengunjung');
+		if ($query->num_rows() > 0 ) {
+			return $query->row()->total_harga;
+		} else {
+			return 0 ;
+		}
 	}
 
 

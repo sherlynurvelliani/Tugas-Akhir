@@ -123,17 +123,9 @@ Main Sidebar Container -->
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url('Laporan_pengunjung') ?>" class="nav-link">
-                  <i class="nav-icon fas fa-list-alt"></i>
-                  <p>Laporan Data Pengunjung</p>
-                </a>
-              </li> 
-            </ul>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
                 <a href="<?php echo base_url('admin/Claporan') ?>" class="nav-link">
                   <i class="nav-icon fas fa-list-alt"></i>
-                  <p>Laporan Data Filter</p>
+                  <p>Laporan Data Pengunjung</p>
                 </a>
               </li> 
             </ul>

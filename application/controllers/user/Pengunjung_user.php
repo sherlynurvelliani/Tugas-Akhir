@@ -70,4 +70,14 @@ class Pengunjung_user extends CI_Controller
 		$pengunjung['isi'] = $this->Pengunjung_model->satuData($key);
 		$this->load->view('user/bukti', $pengunjung);
 	}
+
+	function print_bukti($key){
+
+        $mpdf = new \Mpdf\Mpdf();
+        $pengunjung['isi']  = $this->Pengunjung_model->satuData($key);
+        $data = $this->load->view('user/bukti_tiket',$pengunjung, true);
+        // $html = ob_get_contents();
+        $mpdf->writeHTML($data);
+        $mpdf->Output();
+	}
 }

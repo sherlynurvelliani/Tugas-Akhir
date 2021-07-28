@@ -44,10 +44,10 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="<?php echo base_url('user') ?>">Home</a></li>
           <li><a href="#about">Profil</a></li>
           <li><a href="#features">Informasi</a></li>
-          <li><a href="<?php echo base_url('user/Tiket_user') ?>">Tiket</a></li>
+          <li  class="menu-active"><a href="<?php echo base_url('user/Tiket_user') ?>">Tiket</a></li>
           <li><a href="<?php echo base_url('user/Pengunjung_user') ?>">Pesan Tiket</a></li>
           <li><a href="#gallery">Galeri</a></li>
           <li><a href="#contact">Hubungi kami</a></li>
